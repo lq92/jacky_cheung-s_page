@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.swiper-container {
+  width: 100%;
+  height: 100%; }
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; }
+
+.swiper-pagination {
+  margin-right: 30px; }
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px; }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .wrapper .text {
+    position: absolute;
+    top: 58px;
+    left: 460px;
+    width: 406px;
+    height: 489px; }
+  .wrapper .name {
+    position: absolute;
+    top: 354px;
+    left: 436px; }
+    .wrapper .name .cn_name {
+      color: #f7c370;
+      font-size: 46px;
+      font-weight: 200; }
+      .wrapper .name .cn_name .god {
+        display: inline-block;
+        width: 198px;
+        height: 65px;
+        font-weight: 400;
+        text-align: right;
+        color: #000;
+        background: #f7c370;
+        margin-right: 6px; }
+    .wrapper .name .en_name {
+      font-size: 40px;
+      font-weight: 200;
+      text-indent: 86px;
+      margin-top: 26px;
+      color: #f7c370;
+      text-transform: capitalize; }
+
+/*# sourceMappingURL=style.css.map */

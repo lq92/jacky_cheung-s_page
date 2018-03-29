@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jacky cheung's page</title>
+	<meta charset="utf-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1'>
+	<link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css'>
+	<link rel="stylesheet" href='styles/style.css'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+	<style>
+	</style>
+</head>
+<body>
+<div class='swiper-container'>
+	<div class='swiper-wrapper'>
+		<div class='swiper-slide page_one'>
+			<div class='wrapper'>
+				<img src="images/page_1.jpg">
+				<img class='text' src="images/page1_text.png">
+				<div class='name'>
+					<div class='cn_name'>
+						<strong class='god'>歌神</strong>张学友
+					</div>
+					<div class='en_name'>jacky cheung</div>
+				</div>
+			</div>
+		</div>
+		<div class='swiper-slide page_two'>
+			<img src="images/page_2.jpg">
+			<div></div>
+		</div>
+		<div class='swiper-slide'>Slide 3</div>
+		<div class='swiper-slide'>Slide 4</div>
+	</div>
+	<div class='swiper-pagination'></div>
+</div>
+<script>
+new Swiper('.swiper-container', {
+	direction: 'vertical',
+	grabCursor: true,
+	preventClicks: false,
+	preloadImages: false,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true
+	},
+	mousewheel: true
+})	
+</script>
+</body>
+</html>
