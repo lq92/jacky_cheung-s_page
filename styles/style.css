@@ -16,31 +16,39 @@ html, body {
   box-sizing: border-box; }
 
 .swiper-pagination {
-  margin-right: 30px; }
+  left: 20px; }
+
+.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 20px 0; }
 
 .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px; }
+  width: 18px;
+  height: 18px;
+  background: white;
+  opacity: 1; }
 
-.wrapper {
+.swiper-pagination-bullet-active {
+  background: #2b15ff; }
+
+.page_one .wrapper {
   width: 100%;
   height: 100%;
   position: relative; }
-  .wrapper .text {
+  .page_one .wrapper .text {
     position: absolute;
     top: 58px;
     left: 460px;
     width: 406px;
     height: 489px; }
-  .wrapper .name {
+  .page_one .wrapper .name {
     position: absolute;
     top: 354px;
     left: 436px; }
-    .wrapper .name .cn_name {
+    .page_one .wrapper .name .cn_name {
       color: #f7c370;
       font-size: 46px;
       font-weight: 200; }
-      .wrapper .name .cn_name .god {
+      .page_one .wrapper .name .cn_name .god {
         display: inline-block;
         width: 198px;
         height: 65px;
@@ -49,12 +57,127 @@ html, body {
         color: #000;
         background: #f7c370;
         margin-right: 6px; }
-    .wrapper .name .en_name {
+    .page_one .wrapper .name .en_name {
       font-size: 40px;
       font-weight: 200;
       text-indent: 86px;
       margin-top: 26px;
       color: #f7c370;
       text-transform: capitalize; }
+
+.page_two {
+  position: relative; }
+  .page_two .wrapper {
+    position: absolute;
+    top: 490px;
+    left: 1334px;
+    color: #fff; }
+    .page_two .wrapper .forever {
+      font-size: 40px;
+      margin-bottom: 6px;
+      text-indent: 86px; }
+  .page_two .award {
+    display: flex;
+    position: absolute;
+    top: 122px;
+    left: 990px; }
+    .page_two .award .img {
+      margin-right: 54px; }
+      .page_two .award .img:last-child {
+        margin: 0; }
+
+.page_three .wrapper {
+  width: 1000px;
+  height: 470px;
+  position: absolute;
+  top: 170px;
+  left: 460px; }
+  .page_three .wrapper .content_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 1000px;
+    height: 470px; }
+    .page_three .wrapper .content_wrapper .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 180px;
+      height: 180px;
+      border: 10px solid rgba(0, 0, 0, 0.6);
+      position: relative;
+      margin-right: 50px; }
+      .page_three .wrapper .content_wrapper .content:last-child {
+        margin: 0; }
+      .page_three .wrapper .content_wrapper .content:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10; }
+      .page_three .wrapper .content_wrapper .content .name {
+        position: absolute;
+        z-index: 20;
+        font-size: 20px;
+        color: #fff;
+        font-weight: 400;
+        margin-top: 36px; }
+      .page_three .wrapper .content_wrapper .content .btn_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 20;
+        top: 90px;
+        width: 55px;
+        height: 55px;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        border-radius: 50%; }
+        .page_three .wrapper .content_wrapper .content .btn_wrapper .btn {
+          position: absolute;
+          left: 22px;
+          width: 0;
+          height: 0;
+          border: 10px solid transparent;
+          border-left-color: #fff; }
+  .page_three .wrapper .sing_one {
+    background: url("../images/sing_one.jpg") no-repeat; }
+  .page_three .wrapper .sing_two {
+    background: url("../images/sing_two.jpg") no-repeat; }
+  .page_three .wrapper .sing_three {
+    background: url("../images/sing_three.jpg") no-repeat; }
+  .page_three .wrapper .sing_four {
+    background: url("../images/sing_four.jpg") no-repeat; }
+  .page_three .wrapper .sing_five {
+    background: url("../images/sing_five.jpg") no-repeat; }
+  .page_three .wrapper .sing_six {
+    background: url("../images/sing_six.jpg") no-repeat; }
+  .page_three .wrapper .sing_seven {
+    background: url("../images/sing_seven.jpg") no-repeat; }
+  .page_three .wrapper .sing_eight {
+    background: url("../images/sing_eight.jpg") no-repeat; }
+
+.page_four {
+  position: relative; }
+  .page_four .text_wrapper {
+    position: absolute;
+    color: #fff;
+    top: 110px;
+    left: 460px; }
+    .page_four .text_wrapper .text {
+      font-size: 24px;
+      line-height: 60px;
+      margin-bottom: 15px; }
+    .page_four .text_wrapper .name {
+      font-weight: 400;
+      font-size: 68px;
+      padding-top: 44px;
+      width: 300px;
+      border-top: 1px solid white;
+      color: #f7c370; }
 
 /*# sourceMappingURL=style.css.map */

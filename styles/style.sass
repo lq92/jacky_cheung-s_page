@@ -12,42 +12,152 @@ html, body
 	height: 100%
 	box-sizing: border-box
 .swiper-pagination 
-	margin-right: 30px
+	left: 20px
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet	
+	margin: 20px 0
 .swiper-pagination-bullet 
-	width: 15px
-	height: 15px
+	width: 18px
+	height: 18px
+	background: rgb(255, 255, 255)
+	opacity: 1
+.swiper-pagination-bullet-active
+	background: rgb(43, 21, 255)	
 
-.wrapper 
-	width: 100%
-	height: 100%
+.page_one
+	.wrapper 
+		width: 100%
+		height: 100%
+		position: relative
+		.text
+			position: absolute
+			top: 58px
+			left: 460px
+			width: 406px
+			height: 489px
+		.name
+			position: absolute
+			top: 354px
+			left: 436px
+			.cn_name
+				color: rgb(247, 195, 112)
+				font-size: 46px
+				font-weight: 200
+				.god
+					display: inline-block
+					width: 198px
+					height: 65px
+					font-weight: 400
+					text-align: right
+					color: #000
+					background: rgb(247, 195, 112)	
+					margin-right: 6px
+			.en_name
+				font-size: 40px
+				font-weight: 200
+				text-indent: 86px
+				margin-top: 26px
+				color: rgb(247, 195, 112)	
+				text-transform: capitalize	
+
+.page_two
 	position: relative
-	.text
+	.wrapper
 		position: absolute
-		top: 58px
-		left: 460px
-		width: 406px
-		height: 489px
-	.name
-		position: absolute
-		top: 354px
-		left: 436px
-		.cn_name
-			color: rgb(247, 195, 112)
-			font-size: 46px
-			font-weight: 200
-			.god
-				display: inline-block
-				width: 198px
-				height: 65px
-				font-weight: 400
-				text-align: right
-				color: #000
-				background: rgb(247, 195, 112)	
-				margin-right: 6px
-		.en_name
+		top: 490px
+		left: 1334px
+		color: #fff
+		.forever
 			font-size: 40px
-			font-weight: 200
+			margin-bottom: 6px
 			text-indent: 86px
-			margin-top: 26px
+	.award	
+		display: flex
+		position: absolute
+		top: 122px
+		left: 990px
+		.img
+			margin-right: 54px
+			&:last-child
+				margin: 0
+
+.page_three
+	.wrapper
+		width: 1000px
+		height: 470px
+		position: absolute
+		top: 170px
+		left: 460px
+		.content_wrapper
+			display: flex
+			flex-wrap: wrap
+			align-content: space-between
+			width: 1000px
+			height: 470px
+			.content
+				display: flex
+				flex-direction: column
+				align-items: center
+				width: 180px
+				height: 180px
+				border: 10px solid rgba(0, 0, 0, 0.6)
+				position: relative
+				margin-right: 50px
+				&:last-child
+					margin: 0
+				&:after
+					content: ''
+					width: 100%
+					height: 100%
+					background: rgba(0, 0, 0, 0.6)
+					position: absolute
+					top: 0
+					left: 0
+					z-index: 10
+				.name
+					position: absolute
+					z-index: 20
+					font-size: 20px
+					color: #fff
+					font-weight: 400
+					margin-top: 36px
+				.btn_wrapper
+					display: flex
+					align-items: center
+					justify-content: center
+					position: absolute
+					z-index: 20
+					top: 90px
+					width: 55px
+					height: 55px
+					border: 2px solid #fff
+					box-sizing: border-box
+					border-radius: 50%
+					.btn
+						position: absolute
+						left: 22px
+						width: 0
+						height: 0
+						border: 10px solid transparent
+						border-left-color: #fff	
+		@each $num in one, two, three, four, five, six, seven, eight
+				.sing_#{$num}				
+					background: url('../images/sing_#{$num}.jpg') no-repeat
+
+.page_four
+	position: relative
+	.text_wrapper
+		position: absolute
+		color: #fff			
+		top: 110px
+		left: 460px
+		.text
+			font-size: 24px
+			line-height: 60px
+			margin-bottom: 15px
+		.name
+			font-weight: 400
+			font-size: 68px
+			padding-top: 44px
+			width: 300px
+			border-top: 1px solid rgb(255, 255, 255)		
 			color: rgb(247, 195, 112)	
-			text-transform: capitalize	
