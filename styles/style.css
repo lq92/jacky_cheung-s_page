@@ -1,6 +1,7 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: "Microsoft Yahei"; }
 
 html, body {
   width: 100%;
@@ -30,154 +31,187 @@ html, body {
 .swiper-pagination-bullet-active {
   background: #2b15ff; }
 
-.page_one .wrapper {
+.swiper-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.page_one {
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  position: relative; }
-  .page_one .wrapper .text {
-    position: absolute;
-    top: 58px;
-    left: 460px;
-    width: 406px;
-    height: 489px; }
-  .page_one .wrapper .name {
-    position: absolute;
-    top: 354px;
-    left: 436px; }
-    .page_one .wrapper .name .cn_name {
-      color: #f7c370;
-      font-size: 46px;
-      font-weight: 200; }
-      .page_one .wrapper .name .cn_name .god {
-        display: inline-block;
-        width: 198px;
-        height: 65px;
-        font-weight: 400;
-        text-align: right;
-        color: #000;
-        background: #f7c370;
-        margin-right: 6px; }
-    .page_one .wrapper .name .en_name {
-      font-size: 40px;
-      font-weight: 200;
-      text-indent: 86px;
-      margin-top: 26px;
-      color: #f7c370;
-      text-transform: capitalize; }
+  background-color: #000; }
+  .page_one .wrapper {
+    width: 1000px;
+    height: 100%;
+    background: url("../images/page_1.jpg") no-repeat;
+    position: relative; }
+    .page_one .wrapper .text {
+      position: absolute;
+      top: 58px;
+      left: 0;
+      width: 406px;
+      height: 489px; }
+    .page_one .wrapper .name {
+      position: absolute;
+      top: 354px;
+      left: 0; }
+      .page_one .wrapper .name .cn_name {
+        color: #f7c370;
+        font-size: 46px;
+        font-weight: 200; }
+        .page_one .wrapper .name .cn_name .god {
+          display: inline-block;
+          width: 198px;
+          height: 65px;
+          font-weight: 400;
+          text-align: right;
+          color: #000;
+          background: #f7c370;
+          margin-right: 6px; }
+      .page_one .wrapper .name .en_name {
+        font-size: 40px;
+        font-weight: 200;
+        text-indent: 86px;
+        margin-top: 26px;
+        color: #f7c370;
+        text-transform: capitalize; }
 
 .page_two {
-  position: relative; }
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000; }
   .page_two .wrapper {
-    position: absolute;
-    top: 490px;
-    left: 1334px;
-    color: #fff; }
-    .page_two .wrapper .forever {
-      font-size: 40px;
-      margin-bottom: 6px;
-      text-indent: 86px; }
-  .page_two .award {
-    display: flex;
-    position: absolute;
-    top: 122px;
-    left: 990px; }
-    .page_two .award .img {
-      margin-right: 54px; }
-      .page_two .award .img:last-child {
-        margin: 0; }
-
-.page_three .wrapper {
-  width: 1000px;
-  height: 470px;
-  position: absolute;
-  top: 170px;
-  left: 460px; }
-  .page_three .wrapper .content_wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
     width: 1000px;
-    height: 470px; }
-    .page_three .wrapper .content_wrapper .content {
+    height: 100%;
+    background: url("../images/page_2.jpg") no-repeat;
+    position: relative; }
+    .page_two .wrapper .container {
+      position: absolute;
+      bottom: 40px;
+      right: 0;
+      color: #fff; }
+      .page_two .wrapper .container .forever {
+        font-size: 40px;
+        margin-bottom: 6px;
+        text-indent: 86px; }
+    .page_two .wrapper .award {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 180px;
-      height: 180px;
-      border: 10px solid rgba(0, 0, 0, 0.6);
-      position: relative;
-      margin-right: 50px; }
-      .page_three .wrapper .content_wrapper .content:last-child {
-        margin: 0; }
-      .page_three .wrapper .content_wrapper .content:after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 10; }
-      .page_three .wrapper .content_wrapper .content .name {
-        position: absolute;
-        z-index: 20;
-        font-size: 20px;
-        color: #fff;
-        font-weight: 400;
-        margin-top: 36px; }
-      .page_three .wrapper .content_wrapper .content .btn_wrapper {
+      position: absolute;
+      top: 120px;
+      right: 160px; }
+      .page_two .wrapper .award .img {
+        margin-right: 54px; }
+        .page_two .wrapper .award .img:last-child {
+          margin: 0; }
+
+.page_three {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #020514;
+  position: relative; }
+  .page_three .wrapper {
+    background: url("../images/page_3.jpg") no-repeat;
+    width: 1000px;
+    height: 100%; }
+    .page_three .wrapper .content_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      height: 470px;
+      margin-top: 170px; }
+      .page_three .wrapper .content_wrapper .content {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        position: absolute;
-        z-index: 20;
-        top: 90px;
-        width: 55px;
-        height: 55px;
-        border: 2px solid #fff;
-        box-sizing: border-box;
-        border-radius: 50%; }
-        .page_three .wrapper .content_wrapper .content .btn_wrapper .btn {
+        width: 180px;
+        height: 180px;
+        border: 10px solid rgba(0, 0, 0, 0.6);
+        position: relative;
+        margin-right: 50px; }
+        .page_three .wrapper .content_wrapper .content:last-child {
+          margin: 0; }
+        .page_three .wrapper .content_wrapper .content:after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.6);
           position: absolute;
-          left: 22px;
-          width: 0;
-          height: 0;
-          border: 10px solid transparent;
-          border-left-color: #fff; }
-  .page_three .wrapper .sing_one {
-    background: url("../images/sing_one.jpg") no-repeat; }
-  .page_three .wrapper .sing_two {
-    background: url("../images/sing_two.jpg") no-repeat; }
-  .page_three .wrapper .sing_three {
-    background: url("../images/sing_three.jpg") no-repeat; }
-  .page_three .wrapper .sing_four {
-    background: url("../images/sing_four.jpg") no-repeat; }
-  .page_three .wrapper .sing_five {
-    background: url("../images/sing_five.jpg") no-repeat; }
-  .page_three .wrapper .sing_six {
-    background: url("../images/sing_six.jpg") no-repeat; }
-  .page_three .wrapper .sing_seven {
-    background: url("../images/sing_seven.jpg") no-repeat; }
-  .page_three .wrapper .sing_eight {
-    background: url("../images/sing_eight.jpg") no-repeat; }
+          top: 0;
+          left: 0;
+          z-index: 10; }
+        .page_three .wrapper .content_wrapper .content .name {
+          position: absolute;
+          z-index: 20;
+          font-size: 20px;
+          color: #fff;
+          font-weight: 400;
+          margin-top: 36px; }
+        .page_three .wrapper .content_wrapper .content .btn_wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          z-index: 20;
+          top: 90px;
+          width: 55px;
+          height: 55px;
+          border: 2px solid #fff;
+          box-sizing: border-box;
+          border-radius: 50%; }
+          .page_three .wrapper .content_wrapper .content .btn_wrapper .btn {
+            position: absolute;
+            left: 22px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-left-color: #fff; }
+    .page_three .wrapper .sing_one {
+      background: url("../images/sing_one.jpg") no-repeat; }
+    .page_three .wrapper .sing_two {
+      background: url("../images/sing_two.jpg") no-repeat; }
+    .page_three .wrapper .sing_three {
+      background: url("../images/sing_three.jpg") no-repeat; }
+    .page_three .wrapper .sing_four {
+      background: url("../images/sing_four.jpg") no-repeat; }
+    .page_three .wrapper .sing_five {
+      background: url("../images/sing_five.jpg") no-repeat; }
+    .page_three .wrapper .sing_six {
+      background: url("../images/sing_six.jpg") no-repeat; }
+    .page_three .wrapper .sing_seven {
+      background: url("../images/sing_seven.jpg") no-repeat; }
+    .page_three .wrapper .sing_eight {
+      background: url("../images/sing_eight.jpg") no-repeat; }
 
 .page_four {
-  position: relative; }
-  .page_four .text_wrapper {
-    position: absolute;
-    color: #fff;
-    top: 110px;
-    left: 460px; }
-    .page_four .text_wrapper .text {
-      font-size: 24px;
-      line-height: 60px;
-      margin-bottom: 15px; }
-    .page_four .text_wrapper .name {
-      font-weight: 400;
-      font-size: 68px;
-      padding-top: 44px;
-      width: 300px;
-      border-top: 1px solid white;
-      color: #f7c370; }
+  display: flex;
+  justify-content: center;
+  background-color: #020514; }
+  .page_four .wrapper {
+    width: 1000px;
+    height: 100%;
+    background: url("../images/page_4.jpg") no-repeat;
+    position: relative; }
+    .page_four .wrapper .text_wrapper {
+      position: absolute;
+      color: #fff;
+      top: 110px;
+      left: 0; }
+      .page_four .wrapper .text_wrapper .text {
+        font-size: 24px;
+        line-height: 60px;
+        margin-bottom: 15px; }
+      .page_four .wrapper .text_wrapper .name {
+        font-weight: 400;
+        font-size: 68px;
+        padding-top: 44px;
+        width: 300px;
+        border-top: 1px solid white;
+        color: #f7c370; }
 
 /*# sourceMappingURL=style.css.map */

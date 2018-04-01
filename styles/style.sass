@@ -1,6 +1,7 @@
 * 
 	margin: 0
 	padding: 0
+	font-family: 'Microsoft Yahei'
 html, body 
 	width: 100%
 	height: 100%
@@ -23,22 +24,32 @@ html, body
 .swiper-pagination-bullet-active
 	background: rgb(43, 21, 255)	
 
+.swiper-wrapper
+	display: flex
+	flex-direction: column
+	align-items: center
 
 .page_one
+	display: flex
+	justify-content: center
+	width: 100%
+	height: 100% 
+	background-color: #000
 	.wrapper 
-		width: 100%
+		width: 1000px
 		height: 100%
+		background: url('../images/page_1.jpg') no-repeat
 		position: relative
 		.text
 			position: absolute
 			top: 58px
-			left: 460px
+			left: 0
 			width: 406px
 			height: 489px
 		.name
 			position: absolute
 			top: 354px
-			left: 436px
+			left: 0
 			.cn_name
 				color: rgb(247, 195, 112)
 				font-size: 46px
@@ -61,39 +72,52 @@ html, body
 				text-transform: capitalize	
 
 .page_two
-	position: relative
-	.wrapper
-		position: absolute
-		top: 490px
-		left: 1334px
-		color: #fff
-		.forever
-			font-size: 40px
-			margin-bottom: 6px
-			text-indent: 86px
-	.award	
-		display: flex
-		position: absolute
-		top: 122px
-		left: 990px
-		.img
-			margin-right: 54px
-			&:last-child
-				margin: 0
-
-.page_three
+	display: flex
+	justify-content: center
+	width: 100%
+	height: 100% 
+	background-color: #000
 	.wrapper
 		width: 1000px
-		height: 470px
-		position: absolute
-		top: 170px
-		left: 460px
+		height: 100%
+		background: url('../images/page_2.jpg') no-repeat
+		position: relative
+		.container
+			position: absolute
+			bottom: 40px
+			right: 0
+			color: #fff
+			.forever
+				font-size: 40px
+				margin-bottom: 6px
+				text-indent: 86px
+		.award	
+			display: flex
+			position: absolute
+			top: 120px
+			right: 160px
+			.img
+				margin-right: 54px
+				&:last-child
+					margin: 0
+
+.page_three
+	display: flex
+	justify-content: center
+	width: 100%
+	height: 100% 
+	background-color: #020514
+	position: relative
+	.wrapper
+		background: url('../images/page_3.jpg') no-repeat
+		width: 1000px
+		height: 100%
 		.content_wrapper
 			display: flex
 			flex-wrap: wrap
 			align-content: space-between
-			width: 1000px
 			height: 470px
+			margin-top: 170px
 			.content
 				display: flex
 				flex-direction: column
@@ -145,20 +169,27 @@ html, body
 					background: url('../images/sing_#{$num}.jpg') no-repeat
 
 .page_four
-	position: relative
-	.text_wrapper
-		position: absolute
-		color: #fff			
-		top: 110px
-		left: 460px
-		.text
-			font-size: 24px
-			line-height: 60px
-			margin-bottom: 15px
-		.name
-			font-weight: 400
-			font-size: 68px
-			padding-top: 44px
-			width: 300px
-			border-top: 1px solid rgb(255, 255, 255)		
-			color: rgb(247, 195, 112)	
+	display: flex
+	justify-content: center
+	background-color: #020514
+	.wrapper
+		width: 1000px
+		height: 100%
+		background: url('../images/page_4.jpg') no-repeat
+		position: relative
+		.text_wrapper
+			position: absolute
+			color: #fff			
+			top: 110px
+			left: 0
+			.text
+				font-size: 24px
+				line-height: 60px
+				margin-bottom: 15px
+			.name
+				font-weight: 400
+				font-size: 68px
+				padding-top: 44px
+				width: 300px
+				border-top: 1px solid rgb(255, 255, 255)		
+				color: rgb(247, 195, 112)	
