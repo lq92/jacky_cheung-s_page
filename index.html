@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1'>
 	<link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css'>
+	<link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
 	<link rel="stylesheet" href='styles/style.css'>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
 	<style>
@@ -16,12 +17,14 @@
 		<div class='swiper-slide page_one'>
 			<div class='wrapper'>
 				<img src="images/page_1.jpg">
-				<img class='text' src="images/page1_text.png">
-				<div class='name'>
-					<div class='cn_name'>
-						<strong class='god'>歌神</strong>张学友
+				<div class='animate_wrapper'>
+					<img class='text animated' src="images/page1_text.png">
+					<div class='name animated'>
+						<div class='cn_name'>
+							<strong class='god'>歌神</strong>张学友
+						</div>
+						<div class='en_name'>jacky cheung</div>
 					</div>
-					<div class='en_name'>jacky cheung</div>
 				</div>
 			</div>
 		</div>
@@ -31,7 +34,7 @@
 				<p class='forever'>永远的</p>
 				<img class='text' src='images/page2_text.png'>
 			</div>
-			<div class='award'>
+			<div class='award animated right'>
 				<img class='img' width='66' height='455' src='images/award_1.png'>
 				<img class='img' width='66' height='389' src='images/award_2.png'>
 				<img class='img' width='68' height='286' src='images/award_3.png'>
@@ -94,7 +97,7 @@
 		</div>
 		<div class='swiper-slide page_four'>
 			<img src="images/page_4.jpg">
-			<div class='text_wrapper'>
+			<div class='text_wrapper animated down'>
 				<p class='text'>有人说，所谓歌神，也不过如此。<br>	
 					 我不想反驳，只是想说，<br>	
 					 我们的歌神，早已过了知天命的年纪，他是老了啊。<br>	
@@ -109,6 +112,26 @@
 	<div class='swiper-pagination'></div>
 </div>
 <script>
+function animte(parent, child, classname, allFlag){
+	let str = `${parent} ${child}`;
+	let down = null;
+	function clearClass(obj){
+		setTimeout(() => {
+			obj.classList.remove(classname)
+		}, 500)
+	}
+	if(allFlag){
+		down = document.querySelectorAll(str)
+		Array.prototype.slice.call(down).forEach(item => {
+			item.classList.toggle(classname)
+			clearClass(item)
+		})
+	}else{
+		down = document.querySelector(str)
+		down.classList.add(classname)
+		clearClass(down)
+	}
+}	
 new Swiper('.swiper-container', {
 	direction: 'vertical',
 	grabCursor: true,
@@ -118,8 +141,25 @@ new Swiper('.swiper-container', {
 		el: '.swiper-pagination',
 		clickable: true
 	},
-	mousewheel: true
+	mousewheel: true,
+	speed: 400,
+	on: {
+		init: function(){
+			animte('.page_one', '.animated', 'bounceInDown', true)
+		},
+		slideChange: function(){
+			if(this.activeIndex === 0){
+				animte('.page_one', '.animated', 'bounceInDown', true)
+			}else if(this.activeIndex === 1){
+				animte('.page_two', '.animated', 'bounceInRight', false)
+			}else if(this.activeIndex === 3){
+				animte('.page_four', '.animated', 'bounceInDown', false)
+			}
+		}
+	}
 })
+
+
 let content = document.querySelectorAll('.page_three .content');
 let sings = [ 'resources/MP3/sing_one.mp3', 'resources/MP3/sing_two.mp3', 'resources/MP3/sing_three.mp3', 'resources/MP3/sing_four.mp3', 'resources/MP3/sing_five.mp3', 'resources/MP3/sing_six.mp3', 'resources/MP3/sing_seven.mp3', 'resources/MP3/sing_eight.mp3', ];
 function Music(src){
@@ -131,20 +171,13 @@ Music.prototype.play = function(){
 	audio.src = this.src;
 	audio.play();
 }
-Music.prototype.pause = function(){
-	this.pause();
-} 
 Array.prototype.slice.call(content).forEach((item, index) => {
 	item.addEventListener('click', () => {
 		let music = new Music(sings[index]);
 		if(!this.isPlay){
 			music.play();
 			this.isPlay = true
-		}else{
-			console.log(1)
-			music.pause();
 		}
-		
 	})
 })
 </script>
