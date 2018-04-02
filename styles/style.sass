@@ -1,10 +1,13 @@
-* 
+body, strong, p, h4
 	margin: 0
 	padding: 0
 	font-family: 'Microsoft Yahei'
 html, body 
 	width: 100%
 	height: 100%
+img
+	border: none
+	vertical-align: middle	
 .swiper-container 
 	width: 100%
 	height: 100%
@@ -13,7 +16,7 @@ html, body
 	height: 100%
 	box-sizing: border-box
 .swiper-pagination 
-	left: 20px
+	display: inline-block
 .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet	
 	margin: 20px 0
 .swiper-pagination-bullet 
@@ -28,98 +31,84 @@ html, body
 	display: flex
 	flex-direction: column
 	align-items: center
-
-.page_one
-	display: flex
-	justify-content: center
-	width: 100%
-	height: 100% 
-	background-color: #000
-	.wrapper 
-		width: 1000px
+@each $page in (page_one, page_two, page_three, page_four)
+	.#{$page}
+		display: flex
+		justify-content: center
+		width: 100%
 		height: 100%
-		background: url('../images/page_1.jpg') no-repeat
-		position: relative
-		.text
-			position: absolute
-			top: 58px
-			left: 0
-			width: 406px
-			height: 489px
-		.name
-			position: absolute
-			top: 354px
-			left: 0
-			.cn_name
-				color: rgb(247, 195, 112)
-				font-size: 46px
-				font-weight: 200
-				.god
-					display: inline-block
-					width: 198px
-					height: 65px
-					padding-right: 32px
-					box-sizing: border-box
-					font-weight: 400
-					text-align: right
-					color: #000
-					background: rgb(247, 195, 112)	
-					margin-right: 6px
-			.en_name
-				font-size: 40px
-				font-weight: 200
-				text-indent: 86px
-				margin-top: 26px
-				color: rgb(247, 195, 112)	
-				text-transform: capitalize	
+		background-color: #000
+		.wrapper
+			width: 1000px
+			height: 100%
+			position: relative
+			background: url('../images/#{$page}.jpg') no-repeat
+
+.page_one 
+	.text
+		position: absolute
+		top: 58px
+		left: 0
+		width: 406px
+		height: 489px
+	.name
+		position: absolute
+		top: 354px
+		left: 0
+		.cn_name
+			color: rgb(247, 195, 112)
+			font-size: 46px
+			font-weight: 200
+			.god
+				display: inline-block
+				width: 198px
+				height: 65px
+				padding-right: 32px
+				box-sizing: border-box
+				font-weight: 400
+				text-align: right
+				color: #000
+				background: rgb(247, 195, 112)	
+				margin-right: 6px
+		.en_name
+			font-size: 40px
+			font-weight: 200
+			text-indent: 86px
+			margin-top: 26px
+			color: rgb(247, 195, 112)	
+			text-transform: capitalize	
 
 .page_two
-	display: flex
-	justify-content: center
-	width: 100%
-	height: 100% 
-	background-color: #000
-	.wrapper
-		width: 1000px
-		height: 100%
-		background: url('../images/page_2.jpg') no-repeat
-		position: relative
-		.container
-			position: absolute
-			bottom: 40px
-			right: 0
-			color: #fff
-			.forever
-				font-size: 40px
-				margin-bottom: 6px
-				text-indent: 86px
-		.award	
-			display: flex
-			position: absolute
-			top: 120px
-			right: 160px
-			.img
-				margin-right: 54px
-				&:last-child
-					margin: 0
+	.container
+		position: absolute
+		bottom: 10px
+		right: 14px
+		color: #fff
+		.forever
+			font-size: 32px
+			margin-bottom: 4px
+			text-indent: 72px
+	.award	
+		display: flex
+		position: absolute
+		top: 120px
+		right: 160px
+		.img
+			margin-right: 54px
+			&:last-child
+				margin: 0
 
 .page_three
-	display: flex
-	justify-content: center
-	width: 100%
-	height: 100% 
-	background-color: #020514
-	position: relative
-	.wrapper
-		background: url('../images/page_3.jpg') no-repeat
-		width: 1000px
-		height: 100%
-		.content_wrapper
+	.content_wrapper
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: 470px
+		margin-top: 170px
+		.content_one_wrapper, .content_two_wrapper
 			display: flex
-			flex-wrap: wrap
-			align-content: space-between
-			height: 470px
-			margin-top: 170px
+			justify-content: space-between
+			width: 100%
 			.content
 				display: flex
 				flex-direction: column
@@ -171,27 +160,19 @@ html, body
 					background: url('../images/sing_#{$num}.jpg') no-repeat
 
 .page_four
-	display: flex
-	justify-content: center
-	background-color: #000
-	.wrapper
-		width: 1000px
-		height: 100%
-		background: url('../images/page_4.jpg') no-repeat
-		position: relative
-		.text_wrapper
-			position: absolute
-			color: #fff			
-			top: 110px
-			left: 0
-			.text
-				font-size: 24px
-				line-height: 60px
-				margin-bottom: 15px
-			.name
-				font-weight: 400
-				font-size: 70px
-				padding-top: 44px
-				width: 300px
-				border-top: 1px solid rgb(255, 255, 255)		
-				color: rgb(247, 195, 112)	
+	.text_wrapper
+		position: absolute
+		color: #fff			
+		top: 110px
+		left: 0
+		.text
+			font-size: 24px
+			line-height: 60px
+			margin-bottom: 15px
+		.name
+			font-weight: 400
+			font-size: 70px
+			padding-top: 44px
+			width: 300px
+			border-top: 1px solid rgb(255, 255, 255)		
+			color: rgb(247, 195, 112)	

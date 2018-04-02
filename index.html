@@ -43,53 +43,57 @@
 		<div class='swiper-slide page_three'>
 			<div class='wrapper'>
 				<div class='content_wrapper'>
-					<div class='content sing_one'>
-						<h4 class='name'>时间有泪</h4>
-						<div class='btn_wrapper'>
-							<div class='btn'></div>
-						</div>
-					</div>	
-					<div class='content sing_two'>
-						<h4 class='name'>忘记你我做不到</h4>
-						<div class='btn_wrapper'>
-							<div class='btn'></div>
-						</div>
-					</div>	
-					<div class='content sing_three'>
-						<h4 class='name'>不老的传说</h4>
-						<div class='btn_wrapper'>
-							<div class='btn'></div>
-						</div>
-					</div>	
-					<div class='content sing_four'>
-						<h4 class='name'>你好毒</h4>
-						<div class='btn_wrapper'>
-							<div class='btn'></div>
-						</div>
-					</div>	
-					<div class='content sing_five'>
-						<h4 class='name'>想和你去吹吹风</h4>
-						<div class='btn_wrapper'>
-							<div class='btn'></div>
-						</div>
-					</div>	
-					<div class='content sing_six'>
-						<h4 class='name'>一千个伤心的理由</h4>
-						<div class='btn_wrapper'>
-							<div class='btn'></div>
-						</div>
-					</div>	
-					<div class='content sing_seven'>
-						<h4 class='name'>一路上有你</h4>
-						<div class='btn_wrapper'>
-							<div class='btn'></div>
-						</div>
-					</div>	
-					<div class='content sing_eight'>
-						<h4 class='name'>吻别</h4>
-						<div class='btn_wrapper'>
-							<div class='btn'></div>
-						</div>
+					<div class='content_one_wrapper'>
+						<div class='content sing_one'>
+							<h4 class='name'>时间有泪</h4>
+							<div class='btn_wrapper'>
+								<div class='btn'></div>
+							</div>
+						</div>	
+						<div class='content sing_two'>
+							<h4 class='name'>忘记你我做不到</h4>
+							<div class='btn_wrapper'>
+								<div class='btn'></div>
+							</div>
+						</div>	
+						<div class='content sing_three'>
+							<h4 class='name'>不老的传说</h4>
+							<div class='btn_wrapper'>
+								<div class='btn'></div>
+							</div>
+						</div>	
+						<div class='content sing_four'>
+							<h4 class='name'>你好毒</h4>
+							<div class='btn_wrapper'>
+								<div class='btn'></div>
+							</div>
+						</div>	
+					</div>
+					<div class='content_two_wrapper'>
+						<div class='content sing_five'>
+							<h4 class='name'>想和你去吹吹风</h4>
+							<div class='btn_wrapper'>
+								<div class='btn'></div>
+							</div>
+						</div>	
+						<div class='content sing_six'>
+							<h4 class='name'>一千个伤心的理由</h4>
+							<div class='btn_wrapper'>
+								<div class='btn'></div>
+							</div>
+						</div>	
+						<div class='content sing_seven'>
+							<h4 class='name'>一路上有你</h4>
+							<div class='btn_wrapper'>
+								<div class='btn'></div>
+							</div>
+						</div>	
+						<div class='content sing_eight'>
+							<h4 class='name'>吻别</h4>
+							<div class='btn_wrapper'>
+								<div class='btn'></div>
+							</div>
+						</div>	
 					</div>	
 				</div>
 			</div>
@@ -134,7 +138,6 @@ function animte(parent, child, classname, allFlag){
 }	
 new Swiper('.swiper-container', {
 	direction: 'vertical',
-	grabCursor: true,
 	preventClicks: false,
 	preloadImages: false,
 	pagination: {
@@ -161,23 +164,27 @@ new Swiper('.swiper-container', {
 
 
 let content = document.querySelectorAll('.page_three .content');
-let sings = [ 'resources/MP3/sing_one.mp3', 'resources/MP3/sing_two.mp3', 'resources/MP3/sing_three.mp3', 'resources/MP3/sing_four.mp3', 'resources/MP3/sing_five.mp3', 'resources/MP3/sing_six.mp3', 'resources/MP3/sing_seven.mp3', 'resources/MP3/sing_eight.mp3', ];
+let sings = [ 'resources/MP3/sing_one.mp3', 'resources/MP3/sing_two.mp3', 'resources/MP3/sing_three.mp3', 'resources/MP3/sing_four.mp3', 'resources/MP3/sing_five.mp3', 'resources/MP3/sing_six.mp3', 'resources/MP3/sing_seven.mp3', 'resources/MP3/sing_eight.mp3' ];
 function Music(src){
 	this.src = src;
 	this.isPlay = false;
 }
+let audio = new Audio();
 Music.prototype.play = function(){
-	let audio = new Audio();
 	audio.src = this.src;
-	audio.play();
+	if(!this.isPlay){
+		audio.play();
+		this.isPlay = true;
+	}else{
+		audio.pause();
+		this.isPlay = false;
+	}
 }
-Array.prototype.slice.call(content).forEach((item, index) => {
+let contentArr = Array.prototype.slice.call(content);
+contentArr.forEach((item, index) => {
 	item.addEventListener('click', () => {
-		let music = new Music(sings[index]);
-		if(!this.isPlay){
-			music.play();
-			this.isPlay = true
-		}
+		console.log(index)
+		new Music(sings[index]).play()
 	})
 })
 </script>
